@@ -210,16 +210,6 @@ def main():
                     @return   logits (torch.Tensor): an output tensor with shape (batch_size,
                                   num_labels)
             """
-        # "pooled output"  is additional layer on CLS.
- #I run a classification model using "pooled output" as well as on 1st token [:,0,:] of "sequence output", 1st one has given better performance.
-            # last_hidden_state (sequence_output), pooled_output = bert_model(
-            #     input_ids=encoding['input_ids'],
-            #     attention_mask=encoding['attention_mask']
-            # )
-            # last_hidden_state: (batch_size, seq_len, hidden_size).
-            # pooled_output: (batch_size, hidden_size)
-      # refer to thos for the difference beeween the two outputs and bert and bert for sequence calssifcaion
-            # https://github.com/huggingface/transformers/issues/7540
             # Feed input to BERT
             outputs = self.bert(input_ids=text_IDs, attention_mask=attention_mask)
 
