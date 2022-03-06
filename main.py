@@ -1,8 +1,7 @@
+# the code is modification of the fine tuning ber in this link https://skimai.com/fine-tuning-bert-for-sentiment-analysis/
 import pandas as pd
 import torch
 import torch.nn as nn
-# the code is modification of the fine tuning ber in this link https://skimai.com/fine-tuning-bert-for-sentiment-analysis/
-
 import os
 from transformers import  BertConfig, BertModel
 from transformers import BertTokenizer
