@@ -1,6 +1,8 @@
 import pandas as pd
 import torch
 import torch.nn as nn
+# the code is modification of the fine tuning ber in this link https://skimai.com/fine-tuning-bert-for-sentiment-analysis/
+
 import os
 from transformers import  BertConfig, BertModel
 from transformers import BertTokenizer
@@ -12,6 +14,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score
 import random
 import time
+
 
 def f1_score_func(preds, labels):
 
@@ -59,7 +62,6 @@ def evaluate(model, val_dataloader, device):
         # compute f1 score
         predictions.extend(logits.detach().cpu().numpy())
         true_labels.extend(b_labels.cpu().numpy())
-
 
 
     # Compute the average accuracy and loss over the validation set.
