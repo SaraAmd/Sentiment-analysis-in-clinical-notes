@@ -244,10 +244,6 @@ def main():
                                                     num_warmup_steps=0,  # Default value
                                                     num_training_steps=total_steps)
         return bert_classifier, optimizer, scheduler
-    #model= Clinicalbert(freeze_bert=True)
-    #model.to(device)
-    # Create the optimizer
-
 
 
     # Specify loss function
@@ -349,9 +345,6 @@ def main():
     set_seed(42)  # Set seed for reproducibility
     bert_classifier, optimizer, scheduler = initialize_model(epochs=2)
     train(bert_classifier, train_dataloader, val_dataloader, epochs=2, evaluation=True)
-
-
-
     #torch.save(model.state_dict(), f'ClinicalBert_epoch{i}.model')
 
 
