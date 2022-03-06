@@ -86,7 +86,6 @@ def main():
     # Load the BERT tokenizer
     tokenizer = BertTokenizer.from_pretrained(model_name)
 
-
     # Create a function to tokenize a set of texts
     def preprocessing_for_bert(data):
         """Perform required preprocessing steps for pretrained BERT.
