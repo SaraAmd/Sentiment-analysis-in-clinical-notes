@@ -1,4 +1,4 @@
-# Sentiment-analysis-in-clinical-notes
+# ClinicalBERT For Sentiment-analysis-in-clinical-notes
 
 Install transformer, torch, pytorch library
 
